@@ -7,8 +7,15 @@
 ## スマホで見る（推奨）
 
 1. GitHub に push し、Actions で朝刊を生成・Pages にデプロイする（後述）
-2. 公開 URL（例: `https://<user>.github.io/<repo>/`）をスマホのブラウザで開く
+2. 公開 URL（`https://jumkita.github.io/asahan/`）をスマホのブラウザで開く
 3. ホーム画面に追加すると、アプリのようにすぐ開ける
+
+正しいURL（ハイフンなし）:
+
+```text
+https://jumkita.github.io/asahan/
+```
+
 
 ローカル確認:
 

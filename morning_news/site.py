@@ -231,4 +231,22 @@ def publish_site(
 
     # GitHub Pages が Jekyll 処理しないようにする
     (site_dir / ".nojekyll").write_text("", encoding="utf-8")
+
+    # 誤ったパスでも朝刊へ戻せるようにする（スマホの打ち間違い対策）
+    (site_dir / "404.html").write_text(
+        """<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="refresh" content="0; url=./index.html">
+  <title>朝刊へ移動</title>
+</head>
+<body>
+  <p>ページが見つかりません。<a href="./index.html">今日の朝刊</a>へ戻る</p>
+</body>
+</html>
+""",
+        encoding="utf-8",
+    )
     return site_dir / "index.html"

@@ -26,3 +26,4 @@ def test_publish_site_creates_index_and_history(tmp_path: Path) -> None:
     assert (site_dir / "history.html").exists()
     assert (site_dir / "2099-01-02.html").exists()
     assert (site_dir / ".nojekyll").exists()
+    assert (site_dir / "404.html").exists()
