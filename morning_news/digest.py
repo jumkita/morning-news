@@ -436,8 +436,8 @@ def render_text_digest(items: list[NewsItem], errors: list[str], now: datetime) 
     lines = [
         build_subject(now, len(items)),
         "",
-        "無料で読める範囲（見出し・リード）中心です。有料本文は対象外。",
-        "上部がストラテジスト視点の厳選、下部が網羅確認です。",
+        "無料の見出し・リード中心です。有料全文は再配信しません。",
+        "リンク先は日経など会員が必要な場合あり。上部が厳選、下部が網羅です。",
         "",
         f"■ 厳選（{_priority_badge_text(picks[0]) if picks else 'A/B'}優先・最大10件）",
     ]
@@ -610,7 +610,8 @@ def render_html_digest(items: list[NewsItem], errors: list[str], now: datetime) 
   <div style="max-width:720px;margin:0 auto;background:#fff;padding:16px 16px 28px;border-radius:10px">
     <h1 style="font-size:22px;margin:0 0 8px">{html.escape(build_subject(now, len(items)))}</h1>
     <p style="color:#555;font-size:14px;line-height:1.5;margin:0 0 8px">
-      無料で読める範囲（見出し・リード）中心です。有料本文は対象外です。
+      無料の見出し・リード中心です。有料全文は再配信しません。
+      リンク先は日経など会員が必要な場合があり、全文が読めないことがあります。
       上部の「厳選」は時短用、下部の「網羅」は漏れ確認用です。
     </p>
     {warning}

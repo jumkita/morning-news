@@ -162,6 +162,10 @@ def test_render_digest_includes_summary_and_original_link_cta():
     assert "無料で読める想定" in text
     assert "無料記事を開く" in html_body
     assert "有料の場合あり" in html_body
+    assert "有料全文は再配信しません" in text
+    assert "有料全文は再配信しません" in html_body
+    assert "会員が必要" in text
+    assert "会員が必要" in html_body
     assert build_subject(now, 2) == "[朝刊] 2026-07-10（金） 2件"
 
 
